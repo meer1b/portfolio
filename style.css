@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+header {
+    background-color: #1b4851;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+samp
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+h2 {
+    border-bottom: 2px solid #c8c8c8;
+    padding-bottom: 5px;
+    color: white;
+    background-color: #1b4851;
+}
+
+h3 {
+    color: #1b4851;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+a{
+    background-color: #1b4851;
+    color: white;
+}
+
+footer {
+    background-color: #1b4851;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+input, textarea {
+    width: 100%;
+    max-width: 400px;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+form{
+    margin-left: 30px;
+}
+
+button {
+    margin-top: 10px;
+    padding: 8px 12px;
+}
+

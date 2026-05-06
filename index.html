@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Portfolio de María</title>
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -13,53 +14,77 @@
         <p>Estudiante de Desarrollo de Aplicaciones Multiplataforma</p>
     </header>
 
-    <section>
-        <h2>Sobre mí</h2>
-        <p>
-            Soy estudiante de informática y me interesa el desarrollo de aplicaciones.
-            Me gusta aprender programación y crear soluciones sencillas.
-        </p>
-        <a href="https://github.com/meer1b" target="_blank">Mi GitHub</a>
-    </section>
+    <main>
+        <section>
+            <h2>Sobre mí</h2>
+            <p>
+                Soy estudiante de informática y me interesa el desarrollo de aplicaciones.
+                Tengo especial interés en los videojuegos y en cómo se crean.
+            </p>
+            <a href="https://github.com/meer1b" target="_blank">Mi GitHub</a>
+        </section>
 
-    <section>
-        <h2>Habilidades</h2>
-        <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>Java</li>
-            <li>SQL</li>
-            <li>Git</li>
-        </ul>
-    </section>
+        <section>
+            <h2>Habilidades</h2>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Java</li>
+                <li>SQL</li>
+                <li>JavaScript</li>
+                <li>JSON</li>
+            </ul>
+        </section>
 
-    <section>
-        <h2>Formación</h2>
-        <p>
-            CFGS Desarrollo de Aplicaciones Multiplataforma (Actualidad)<br>
-            IES Gregorio Prieto
-        </p>
-        <p>
-            CFGM Sistemas Microinformáticos y Redes (2023 - 2025)<br>
-            IES Gregorio Prieto
-        </p>
-    </section>
+        <section>
+            <h2>Formación</h2>
 
-    <section>
-        <h2>Experiencia</h2>
-        <p>
-            Prácticas en empresa (2025)<br>
-            Mantenimiento de equipos, gestión de bases de datos y apoyo en tareas informáticas.
-        </p>
-    </section>
+            <article>
+                <h3>CFGS DAM</h3>
+                <p>IES Gregorio Prieto (Actualidad)</p>
+            </article>
 
-    <section>
-        <h2>Contacto</h2>
-        <p>Email: mariabuceta65@gmail.com</p>
-        <p>
+            <article>
+                <h3>CFGM SMR</h3>
+                <p>IES Gregorio Prieto (2023 - 2025)</p>
+            </article>
+        </section>
+
+        <section>
+            <h2>Experiencia</h2>
+            <article>
+                <h3>Prácticas en empresa</h3>
+                <p>
+                    Mantenimiento de equipos, gestión de bases de datos y apoyo en tareas informáticas.
+                </p>
+            </article>
+        </section>
+
+        <section>
+            <h2>Contacto</h2>
+            <p>Email: mariabuceta65@gmail.com</p>
             <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
-        </p>
-    </section>
+            
+            <h3>Formulario de contacto</h3>
+            <form>
+                <label for="nombre">Nombre:</label><br>
+                <input type="text" id="nombre" name="nombre"><br><br>
+
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email"><br><br>
+
+                <label for="mensaje">Mensaje:</label><br>
+                <textarea id="mensaje" name="mensaje"></textarea><br><br>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 María Buceta</p>
+    </footer>
 
 </body>
 
