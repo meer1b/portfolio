@@ -110,25 +110,58 @@ nav {
 
 
 /*proyectos*/
-.proyectos-container {
+#repositorios {
     display: flex;
-    gap: 20px;
     flex-wrap: wrap;
+    gap: 20px;
 }
 
-.proyecto {
+.repo {
     border: 1px solid #ccc;
+    border-radius: 10px;
     padding: 15px;
     width: 250px;
-    border-radius: 10px;
-    transition: transform 0.2s, box-shadow 0.2s;
+    transition: transform 0.2s;
 }
 
-.proyecto:hover {
+.repo:hover {
     transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
+.repo a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #1b4851;
+}
+
+.repo a:hover {
+    text-decoration: underline;
+}
+
+
+/*repo*/
+#repositorios {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.repo {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    width: 250px;
+}
+
+.repo a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #1b4851;
+}
+
+.repo a:hover {
+    text-decoration: underline;
+}
 
 /*formulario*/
 input, textarea {
@@ -182,17 +215,16 @@ footer {
         gap: 10px;
     }
 
-    .proyectos-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .proyecto {
-        width: 90%;
-    }
-
     #lista-habilidades {
         justify-content: center;
+    }
+
+    #repositorios {
+    justify-content: center;
+}
+
+    .repo {
+        width: 90%;
     }
 
     
@@ -213,9 +245,22 @@ body.dark h3 {
     color: #4db6ac;            
 }
 
-body.dark .proyecto{
-    border-color: #444;
+body.dark .repo {
     background-color: #1e1e1e;
+    border-color: #444;
+}
+
+body.dark .repo a {
+    color: #4db6ac;
+}
+
+body.dark .repo {
+    background-color: #1e1e1e;
+    border-color: #444;
+}
+
+body.dark .repo a {
+    color: #4db6ac;
 }
 
 body.dark #lista-estudios article{

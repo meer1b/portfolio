@@ -1,7 +1,5 @@
 const toggle = document.getElementById("cambiarTema");
 const body = document.body;
-
-// cargar tema 
 const temaGuardado = localStorage.getItem("tema");
 
 if (temaGuardado === "dark") {
@@ -9,7 +7,6 @@ if (temaGuardado === "dark") {
     toggle.textContent = "☀️";
 }
 
-// cambiar tema
 toggle.addEventListener("click", () => {
     body.classList.toggle("dark");
 
@@ -43,7 +40,6 @@ const estudios = [
 
 function mostrarEstudios() {
     listaEstudios.innerHTML = "";
-
     estudios.forEach(estudio => {
         const article = document.createElement("article");
 
@@ -52,7 +48,6 @@ function mostrarEstudios() {
             <p>${estudio.centro}</p>
             <p>${estudio.fecha}</p>
         `;
-
         listaEstudios.appendChild(article);
     });
 }
@@ -68,21 +63,50 @@ btnFormEstudio.addEventListener("click", () => {
 
 formEstudio.addEventListener("submit", (event) => {
     event.preventDefault();
-
     const nuevoEstudio = {
         titulo: document.getElementById("titulo-estudio").value,
         centro: document.getElementById("centro-estudio").value,
         fecha: document.getElementById("fecha-estudio").value
     };
-
     estudios.push(nuevoEstudio);
-
     mostrarEstudios();
     formEstudio.reset();
     formEstudio.style.display = "none";
 });
-
-
 mostrarEstudios();
 
 
+
+
+const contenedorRepos = document.getElementById("repositorios");
+
+async function obtenerRepositorios() {
+    try {
+        const respuesta = await fetch(
+            "https://api.github.com/users/meer1b/repos"
+        );
+        const repositorios = await respuesta.json();
+        mostrarRepositorios(repositorios);
+
+    } catch (error) {
+        contenedorRepos.innerHTML =
+            "<p>Error al cargar repositorios</p>";
+    }
+}
+
+function mostrarRepositorios(repositorios) {
+    contenedorRepos.innerHTML = "";
+    repositorios.forEach(repo => {
+        const article = document.createElement("article");
+        article.classList.add("repo");
+        article.innerHTML = `
+            <h3>${repo.name}</h3>
+            <a href="${repo.html_url}" target="_blank">
+                Ver repositorio
+            </a>
+        `;
+        contenedorRepos.appendChild(article);
+    });
+}
+
+obtenerRepositorios();
